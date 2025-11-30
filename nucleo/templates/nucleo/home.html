@@ -28,7 +28,7 @@
 </head>
 
 <body class="d-flex justify-content-center">
-    <div id="home-screen" class="screen">
+    <div id="home-screen" class="screen active-screen" >
             <div class="header sticky top-0 p-3 flex items-center justify-between z-10 shadow-sm">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-didi-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -75,45 +75,76 @@
                 </div>
 
                 <h2 class="text-xl font-bold text-didi-dark pt-2">Restaurantes Populares</h2>
+<a href="{% url 'pedido_detalle' %}" 
+   class="block cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+    
+    <img src="https://placehold.co/420x150/f9aa33/FFFFFF?text=Restaurante+La+Esquina"
+         alt="Restaurante"
+         class="w-full h-36 object-cover">
 
-                <div onclick="showScreen('detail-screen')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
-                    <img src="https://placehold.co/420x150/f9aa33/FFFFFF?text=Restaurante+La+Esquina" alt="Restaurante" class="w-full h-36 object-cover">
-                    <div class="p-3">
-                        <div class="flex justify-between items-center mb-1">
-                            <h3 class="text-lg font-bold text-didi-dark">Tacos El Pastorcito</h3>
-                            <span class="bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">4.8 ⭐</span>
-                        </div>
-                        <p class="text-sm text-gray-500">Comida Mexicana · $</p>
-                        <div class="flex items-center text-sm text-gray-500 mt-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-didi-primary mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span>20 - 30 min</span>
-                            <span class="ml-3">Envío $15 MXN</span>
-                        </div>
-                    </div>
-                </div>
+    <div class="p-3">
+        <div class="flex justify-between items-center mb-1">
+            <h3 class="text-lg font-bold text-didi-dark">Tacos El Pastorcito</h3>
+            <span class="bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                4.8 ⭐
+            </span>
+        </div>
 
-                <div onclick="showScreen('detail-screen')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
-                    <img src="https://placehold.co/420x150/9a51e6/FFFFFF?text=Restaurante+Italiano" alt="Restaurante" class="w-full h-36 object-cover">
-                    <div class="p-3">
-                        <div class="flex justify-between items-center mb-1">
-                            <h3 class="text-lg font-bold text-didi-dark">Pizzería La Mamma</h3>
-                            <span class="bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">4.6 ⭐</span>
-                        </div>
-                        <p class="text-sm text-gray-500">Pizza y Pastas · $$</p>
-                        <div class="flex items-center text-sm text-gray-500 mt-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-didi-primary mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span>35 - 45 min</span>
-                            <span class="ml-3">Envío Gratis</span>
-                        </div>
-                    </div>
-                </div>
+        <p class="text-sm text-gray-500">Comida Mexicana · $</p>
+
+        <div class="flex items-center text-sm text-gray-500 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="h-4 w-4 text-didi-primary mr-1"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+                 stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" 
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>20 - 30 min</span>
+            <span class="ml-3">Envío $15 MXN</span>
+        </div>
+    </div>
+
+</a>
+                <a href="{% url 'pedido_detalle' %}" 
+   class="block cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+
+    <img src="https://placehold.co/420x150/9a51e6/FFFFFF?text=Restaurante+Italiano"
+         alt="Restaurante"
+         class="w-full h-36 object-cover">
+
+    <div class="p-3">
+        <div class="flex justify-between items-center mb-1">
+            <h3 class="text-lg font-bold text-didi-dark">Pizzería La Mamma</h3>
+            <span class="bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                4.6 ⭐
+            </span>
+        </div>
+
+        <p class="text-sm text-gray-500">Pizza y Pastas · $$</p>
+
+        <div class="flex items-center text-sm text-gray-500 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="h-4 w-4 text-didi-primary mr-1"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+                 stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" 
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+
+            <span>35 - 45 min</span>
+            <span class="ml-3">Envío Gratis</span>
+        </div>
+    </div>
+
+</a>
 
             </div>
         </div>
-    <script src="{% static 'script.js' %}"></script>
+    <script src="{% static 'scripts.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

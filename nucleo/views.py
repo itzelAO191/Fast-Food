@@ -1,22 +1,13 @@
-
 from django.shortcuts import render, redirect
-from .models import Pedido
+
+def login_page(request):
+    return render(request, "nucleo/login.html") 
 
 def home(request):
     return render(request, "nucleo/home.html")
 
-def ordenar(request):
-    if request.method == "POST":
-        nombre = request.POST["nombre"]
-        comida = request.POST["comida"]
-        direccion = request.POST["direccion"]
+def pedido_detalle(request):
+    return render(request, "nucleo/pedido.html")
 
-        Pedido.objects.create(
-            nombre=nombre,
-            comida=comida,
-            direccion=direccion
-        )
-
-        return redirect("home")
-
-    return render(request, "nucleo/order.html")
+def rastreo(request): 
+    return render(request, "nucleo/repartidor.html")

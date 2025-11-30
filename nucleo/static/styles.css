@@ -1,0 +1,56 @@
+body {
+    background-color: #f0f0f0;
+    font-family: 'Inter', sans-serif;
+}
+
+.app-container {
+    max-width: 420px;
+    min-height: 100vh;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.screen {
+    display: none;
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+.active-screen {
+    display: block;
+}
+
+.header {
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
+.didi-button {
+    background-color: #FF7C2C;
+    border-color: #FF7C2C;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.didi-button:hover {
+    background-color: #e56b25;
+    border-color: #e56b25;
+    color: white;
+}
+
+.map-placeholder {
+    height: 300px;
+    background-color: #e0e0e0;
+    background-image: url('https://placehold.co/420x300/CCCCCC/333333?text=Mapa+de+Rastreo+GPS');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    border-radius: 0;
+}
