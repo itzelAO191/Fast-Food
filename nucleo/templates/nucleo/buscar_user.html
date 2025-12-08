@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar</title>
+</head>
+<body>
+    <h1>Buscado de Usuarios:</h1>
+
+    <form action="" method="get">
+        <label>Buscar por usuario:</label>
+        <input type="text" name="consultar_usuario" placeholder="Ej. jose" required>
+        <input type="submit" value="Buscar">
+    </form>
+
+    <hr>
+
+    <h2>Resultados:</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>correo</th>
+                <th>telefono</th>
+                <th>direccion</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in resultados %}
+                <tr>
+                    <td>{{ usuario.nombre }}</td>
+                    <td>{{ usuario.apellido }}</td>
+                    <td>{{ usuario.email }}</td>
+                    <td>{{ usuario.telefono }}</td>
+                    <td>{{ usuario.direccion }}</td>
+
+                    <td>
+                        <a href="/editar/{{ usuario.id }}/">Editar</a>
+                    </td>
+                    <td>
+                        <a href="/eliminar/{{ usuario.id }}/">Eliminar</a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6">No se encontraron productos con ese criterio.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
