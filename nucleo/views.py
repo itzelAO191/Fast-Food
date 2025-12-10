@@ -14,6 +14,9 @@ def pedido_detalle(request):
 def rastreo(request): 
     return render(request, "nucleo/repartidor.html")
 
+def dashboard(request):
+    return render(request, "nucleo/dashboard.html")
+
 def usuario(request):
 
     if request.method == 'POST':
